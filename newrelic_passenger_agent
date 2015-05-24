@@ -78,7 +78,7 @@ module PassengerAgent
       #uncomment to test example_output files2
       #return File.read("example_output/#{command.split('/').last}_version-#{passenger_version}")
 
-      result = `#{command}`
+      result = `sudo #{command}`
 
       unless $?.success?
         $stderr.puts "failed executing #{command}"
